@@ -1,0 +1,6 @@
+output/
+
+Practica.hs
+*.hi
+*.o
+dist-newstyle/
