@@ -27,8 +27,10 @@ runCommand ws image = case commandFilter ws of
     Just f -> imageResponse (f image)
 
 -- commandFilter traduce las palabras del comando a un filtro.
--- Nothing indica comando desconocido o parametro invalido
+-- Nothing indica comando desconocido o parametro invalido.
+-- identity no cambia nada: la GUI lo usa para validar el archivo al abrirlo
 commandFilter :: [String] -> Maybe Filter
+commandFilter ["identity"] = Just id
 commandFilter ["negative"] = Just negative
 commandFilter ["brightness", n] = fmap brightness (readInt n)
 commandFilter ["threshold", n] = fmap threshold (readInt n)
