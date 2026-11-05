@@ -12,7 +12,7 @@
 | 1:30 | Escribo `-60` en brillo y Enter, luego **Aplicar umbral** con `128`. | "Los parámetros viajan en el comando. `brightness` es `applyPixel (clamp . (+ n))`." |
 | 1:50 | En el campo chain dejo `brightness:30,rotateRight,threshold:128` y clic en **Aplicar cadena**. | "Una cadena es `applyChain`, que compone los filtros de izquierda a derecha con recursión." |
 | 2:15 | Clic en **Comprimir**. Leo la tarjeta. Luego **Aplicar umbral**, **Seguir desde el resultado** y otra vez **Comprimir**. | "La foto baja a 35%. En blanco y negro hay rachas largas y baja a menos de 3%. `roundTrip True` comprueba que descomprimir da la original." |
-| 2:40 | Escribo `sepia` en el campo de cadena y presiono Enter. Leo la línea roja de estado. | "Si el comando o el PGM están mal, Haskell responde ERROR, la GUI lo muestra en rojo y el servidor sigue vivo. Cada mensaje dice cuántos ms tardó Haskell."" |
+| 2:40 | Escribo `sepia` en el campo de cadena y presiono Enter. Leo la línea roja de estado. | "Si el comando o el PGM están mal, Haskell responde ERROR, la GUI lo muestra en rojo y el servidor sigue vivo. Cada mensaje dice cuántos ms tardó Haskell." |
 | 2:50 | Clic en **Guardar resultado**. | "Como trabajo futuro: P5, color, Sobel, Huffman y QuickCheck." |
 
 **Si la GUI falla:** `runghc -isrc app/Main.hs` y abro los archivos de `output/` en GIMP.
