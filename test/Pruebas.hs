@@ -1,4 +1,5 @@
 import Image (Image, onRows, width, height)
+import Image.Pgm (parsePgm, renderPgm)
 
 check :: (Eq a, Show a) => String -> a -> a -> IO ()
 
@@ -25,3 +26,5 @@ main = do
     check "width regresa 0 con lista vacia" 0 (width [])
     check "height regresa el alto" 3 (height mini)
     check "height regresa 0 si l = []" 0 (height [])
+    check "parsePgm lee mini" mini (parsePgm miniText)
+    check "renderPgm escribe mini" miniText (renderPgm mini)
