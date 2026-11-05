@@ -1,6 +1,7 @@
+build/
 output/
-
-Practica.hs
 *.hi
 *.o
+__pycache__/
+Practica.hs
 dist-newstyle/
